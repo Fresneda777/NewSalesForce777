@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/layout::head(~{::title},~{::link})">
+    <title th:text="${titulo}"></title>
+
+
+</head>
+<body class="">
+<div class="wrapper ">
+    <div
+            th:replace="layout/layout::sidebar">
+    </div>
+    <div class="main-panel">
+        <nav th:replace="layout/layout::navBar"> </nav>
+        <div style="margin-top:100px;padding:25px">
+            <div class="content">
+            </div>
+            <div class="card">
+                <div class="card-header" >
+
+                    <div class="row">
+                        <div class="p-2 flex-fill"><h4>Dashboard - Devs</h4></div>
+                        <div class="container-fluid">
+                            <div class="row" style="margin: 0 auto">
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-globe text-warning"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Empleados</p>
+                                                        <p class="card-title" th:text="${empleados}"><p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--  segunda card -->
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-money-coins text-success"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Movimientos</p>
+                                                        <p class="card-title" th:text="${canMovimientos}"><p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer ">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- TERCER CARD  -->
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="card card-stats">
+                                        <div class="card-body ">
+                                            <div class="row">
+                                                <div class="col-5 col-md-4">
+                                                    <div class="icon-big text-center icon-warning">
+                                                        <i class="nc-icon nc-vector text-danger"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-7 col-md-8">
+                                                    <div class="numbers">
+                                                        <p class="card-category">Empresas</p>
+                                                        <p class="card-title" th:text="${cantEmpresas}"><p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-footer ">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <footer th:include="layout/layout::footer"></footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
